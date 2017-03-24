@@ -25,37 +25,36 @@ def usbrelay(x):
         if i == '1':
     	    h = i + ('0' * count)
 	    j = hex(int(h,2))
-            j = 'Sending USB code ' +  j
+            j = 'Sending USB code ' +  j #placeholder for actual codes
             time.sleep(1)            
             print(j)
         else:
             pass
         count += 1
-    print('reset relay')
+    print('reset relay') #placeholder for actual codes
     return 0
 
 # Function that Parses through binary and processes each gpio relay
 def sendgpio(var, gid):
     var.setmode(var.BCM)
     var.setwarnings(False)
-    led = 4
     # Representing relay 17-24 (8 ch relay)
-    relay = "gpio17", "gpio18", "gpio19", "gpio20", "gpio21", "gpio22", "gpio23", "gpio24";
+    relay = "gpio17", "gpio18", "gpio19", "gpio20", "gpio21", "gpio22", "gpio23", "gpio24"; #placeholder for actual codes
     count = 0
     for i in reversed(gid):
         if i == '1':            
 #             var.setup(led,var.OUT)
-            print("Light on")
+            print("Relay on")
 #             var.output(led,var.HIGH)
             print(relay[count])
             time.sleep(1)
-            print("Light off")
+            print("Relay off")
 #             var.output(led,var.LOW)
         count += 1
     var.cleanup()
     return 0
 
-########### Start of main  #######
+########### Start of main  ############
 
 # set number of relays
 channels = 24
