@@ -70,7 +70,7 @@ if len(sys.argv) == 2:
     except:
         pass
 else:
-    msg = 'Example: grelay_multi.py [relay#] or [all]'
+    msg = 'Example: 24chRelay.py [relay#] or [all]'
     sys.exit(msg)
 
 if t == 'all':
